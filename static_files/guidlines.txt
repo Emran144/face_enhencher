@@ -1,0 +1,12 @@
+Create Venv: python -m venv gfpgan_venv
+Activation venv: gfpgan_venv\Scripts\activate
+
+If the error "ModuleNotFoundError: No module named 'torchvision.transforms.functional_tensor'" occurs then 
+    go to "G:\Spectrum\PROJECTs\gfpgan\gfpgan_venv\lib\site-packages\basicsr\data\degradations.py" location 
+    and change the import "from torchvision.transforms.functional_tensor import rgb_to_grayscale" to 
+    "from torchvision.transforms.functional import rgb_to_grayscale"
+
+
+CUDA and Torch Compatibiltiy: pip install torch torchvision --extra-index-url https://download.pytorch.org/whl/cu116
+
+Run the project: python inference_gfpgan.py -i inputs/whole_imgs -o results -v 1.3 -s 2

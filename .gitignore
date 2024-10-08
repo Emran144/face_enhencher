@@ -1,0 +1,9 @@
+gfpgan_venv
+inputs/*
+!inputs/.gitkeep
+outputs/*
+!outputs/.gitkeep
+pretrained_models/*
+!pretrained_models/.gitkeep
+gfpgan/weights/*
+!gfpgan/weights/.gitkeep
